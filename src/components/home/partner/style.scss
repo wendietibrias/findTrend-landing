@@ -1,0 +1,48 @@
+
+.partner--container {
+    padding:6rem 0;
+ 
+    @media screen and (max-width:560px) {
+       padding:3rem 0;
+    }
+
+    .partner--container-content {
+        width:1200px;
+        max-width:100%;
+        padding:0 1rem 0;
+        margin:0 auto;
+        text-align:center;
+
+        @media screen and (max-width:560px) {
+           width:100%;
+        }
+
+
+         h1 {
+            font-size:3rem;
+
+            @media screen and (max-width:560px) {
+                font-size:2.5rem;
+            }
+         }
+
+         .partner--container-content-grids{
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            gap:1rem;
+            margin-top:5rem;
+
+
+            @media screen and (max-width:560px) {
+               grid-template-columns: repeat(2,1fr);   
+               justify-items: center;
+            }
+
+            img {
+               @media screen and (max-width:900px) {
+                   width:100%;
+               }
+            }
+         }
+    }
+}

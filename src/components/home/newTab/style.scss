@@ -1,0 +1,91 @@
+@import "../../../styles/variables/colors";
+
+.new-tab--container {
+    width:100%;
+    min-height:100vh;
+    background-color:$primary-color;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align: center;
+    flex-direction: column;
+    padding:0 1.5rem;
+
+    @media screen and (max-width:560px) {
+       padding:0 1rem;
+    }
+
+    .new-tab--container-content{
+       max-width:100%;
+       width:650px;
+       display:flex;
+       align-items:center;
+       justify-content:center;
+       flex-direction: column;
+       
+
+       @media screen and (max-width:560px) {
+          width:100%;
+       }
+
+       p {
+         font-size:1.1rem;
+       }
+   
+        h1 {
+           font-size:4rem;
+           font-weight:700;
+
+           @media screen and (max-width:560px) {
+              font-size:2rem;
+           }
+        }
+   
+        .new-tab--container-box-main{
+           width:max-content;
+           position:relative;
+           margin:5rem 0 3rem;
+           display: flex;
+           align-items: center;
+           column-gap:1.5rem;
+
+           @media screen and (max-width:560px) {
+               width:100%;
+               flex-direction: column;
+               row-gap:1.5rem;
+               margin:3rem 0 1rem;
+           }
+
+   
+            .new-tab--container-box {
+               background-color: $white-color;
+               padding:3rem 5rem;
+               border-radius:12px;
+               width:100%;
+               display: flex;
+               justify-content: center;
+               align-items: center;
+
+               @media screen and (max-width:560px) {
+                  padding:3rem 2rem;
+               }
+            }
+   
+            #img-tab1 {
+               align-self:flex-start;
+               @media screen and (max-width:560px) {
+                  top:-3rem;
+                  left:0;
+               }
+            }
+   
+            #img-tab2 {       
+               align-self:flex-end;        
+               @media screen and (max-width:560px) {
+                  bottom:0;
+                  right:0;
+               }
+            }
+        }
+    }
+}

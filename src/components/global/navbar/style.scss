@@ -1,0 +1,151 @@
+@import "../../../styles/variables/colors";
+@import "../../../styles/variables/font_size";
+
+.container--navbar {
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    padding:1.5rem 0;
+    z-index:99;
+    transition:color 0.35s ease-in;
+
+    &.active {
+        background-color:$black-color;
+    }
+
+    @media screen and (max-width:1290px) {
+        padding:1.5rem;
+    }
+
+    @media screen and (max-width:900px) {
+        padding:1.5rem 2rem;
+    }
+
+    @media screen and (max-width:560px) {
+        padding:1.5rem 1rem;
+    }
+
+    .navbar--container {
+        max-width:1220px;
+        margin:0 auto;
+        display:flex;
+        align-items:center;
+        justify-content:space-between;
+
+        .company-logo {
+            z-index:99999;
+            @media screen and (max-width:560px) {
+                width:120px;
+            }
+        }
+
+         .navbar--container-links {
+            @media screen and (max-width:900px) {
+                width:100%;
+                position:fixed;
+                top:-100%;
+                left:0;
+                flex-direction: column;
+                height:100vh;
+                background-color: rgba($black-color,0.7);
+                transition:all 0.35s ease-in;
+                justify-content: center;
+                row-gap:1.5rem;
+
+                 &.active {
+                    top:0;
+                 }
+             }
+
+            display: flex;
+            align-items:center;
+            column-gap:2.5rem;
+            
+
+             .links-item {
+                 list-style:none;
+
+                  a {
+                     text-decoration:none;
+                     color:$white-color;
+                     font-size:0.95rem;
+                     font-weight:400;
+
+                     @media screen and (max-width:900px) {
+                        font-size:1.5rem;
+                     }
+
+                     @media screen and (max-width:560px) {
+                        font-size:1.2rem;
+                     }
+                  }
+             }
+
+             .navbar--container-buttons-wrapper {
+                display:none;
+
+                @media screen and (max-width:900px) {
+                    display:flex;
+                 }
+
+                 
+                button {
+                    background:transparent;
+                    color:$white-color;
+                    border:none;
+                    cursor:pointer;
+                    padding:0.6rem 1.5rem;
+                    font-weight:500;
+                    font-size:0.9rem;
+
+                    &.active {
+                        background-color: $white-color;
+                        color:$black-color;
+                        font-weight:600;
+                        border-radius:100px;
+                    }
+                }
+             }
+         }
+
+
+
+         .navbar--container-buttons {
+             @media screen and (max-width:900px) {
+                display:none;
+             }
+
+             button {
+                background:transparent;
+                color:$white-color;
+                border:none;
+                cursor:pointer;
+                padding:0.6rem 1.5rem;
+                font-weight:500;
+                font-size:0.9rem;
+
+                 &.active {
+                     background-color: $white-color;
+                     color:$black-color;
+                     font-weight:600;
+                     border-radius:100px;
+                 }
+             }
+         }
+
+         #hamburger-button {
+             display:none;
+             z-index:99999;
+
+             @media screen and (max-width:900px) {
+                 display:block;
+                 background:transparent;
+                 border:none;
+                 outline:none;
+                 cursor:pointer;
+             }
+         }
+    }
+}
+

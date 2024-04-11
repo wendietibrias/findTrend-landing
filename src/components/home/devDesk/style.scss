@@ -1,0 +1,28 @@
+@import "../../../styles/variables/colors";
+
+.dev-desk--container {
+    width:100%;
+    padding:6rem 0;
+
+     .dev-desk--container-content {
+         max-width:1200px;
+         padding:0 1rem 0;
+         margin:0 auto;
+
+          h1 {
+             font-size:4rem;
+
+             @media screen and (max-width:560px) {
+                font-size:2.5rem;
+             }
+
+              span {
+                color:$secondary-alt-color;
+              }
+
+              &.active {
+                color:$secondary-alt-color;
+              }
+          }
+     }
+}
