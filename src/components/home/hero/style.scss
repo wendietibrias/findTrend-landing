@@ -11,8 +11,9 @@
     align-items: center;
 
     @media screen and (max-width:900px) {
-        justify-content: center;
+      justify-content:center;
     }
+
 
     .container--hero-info {
        width:700px;
